@@ -72,3 +72,21 @@ body{
     cursor: pointer;
     transition: 0.3s;
 }
+.btn:hover{
+    opacity: .85;
+}
+/*Link*/
+.forgot-link{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+.forgot-link:hover{
+    text-decoration: underline;
+}
+footer{
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
