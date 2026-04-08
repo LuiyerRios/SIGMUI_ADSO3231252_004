@@ -1,0 +1,26 @@
+*{/*Estilos globales*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Estilos del body en general*/
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("../img/fondo_login.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*Contenedor principal*/
+.login-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
