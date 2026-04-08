@@ -26,6 +26,6 @@ function validateEmail(emailValue){
 
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;/*Esta expresion regular verifica que el email tenga un formato correcto, con caracteres antes y despues del @ y un dominio valido */
 
-    return regex.test(emailValue);
+    return regex.test(emailValue);/*El metodo test() devuelve true si el email cumple con el formato definido por la expresion regular, y false en caso contrario */
 
 }
