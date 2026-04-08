@@ -24,3 +24,51 @@ body{
     justify-content: center;
     align-items: center;
 }
+/*Tarjeta del login*/
+.login-card{
+    width: 400px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+/*Header*/
+.login-header{
+    background: #3A45F7;
+    text-align: center;
+    padding: 18px;
+}
+.login-header h1{
+    color: white;
+    font-size: 28px;
+    text-transform: lowercase;
+}
+.highlight{
+    color: #65D7FF;
+}
+/*Estilo del form*/
+.login-form{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/*Estilos de los inputs*/
+.input-group input{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+}
+.btn{
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #3A45F7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
