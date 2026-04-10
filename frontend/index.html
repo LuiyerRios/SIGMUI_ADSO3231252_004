@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tech parking</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="login-container"><!--Contenedor Principal del login-->
+        <section class="login-card"><!--Tarjeta del login-->
+            <div class="login-header"><!--Header-->
+                <h1>
+                    <span class="highlight">Tech </span> parking
+                </h1>
+            </div>
+            <!--Formulario de datos-->
+            <form class="login-form">
+                <!--Campos de entrada de email y contraseña bien ordenados-->
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="password" required>
+                </div>
+                <!--Botones de accion de inicio de sesion y registro-->
+                <button type="submit" class="btn signin-btn">
+                    Sign In
+                </button>
+                <button type="submit" class="btn signup-btn">
+                    Sign Up
+                </button>
+
+                <!--Enlance con direccion para la recuperacion de contraseña-->
+                <a href="#" class="forgot-link">
+                    Forgot your password?
+                </a>
+            </form>
+        </section>
+    </main>
+    <!--Pie de pagina del login con la marca de copyright-->
+    <footer>
+        <p>CopyRight © Team_004</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
