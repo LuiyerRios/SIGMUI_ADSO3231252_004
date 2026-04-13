@@ -10,7 +10,29 @@
 </head>
 <body>
     <div class="dashboard"><!--Contenedor de dashboard-->
+        <!--Header-->
+        <header class="top-header">
+            <button id="menu-toggle"><!--Botón para mostrar el menú lateral-->
+                <i class="fas fa-bars"></i><!-- "i class=fas fa-bars" se refiere a un ícono de barras -->
+            </button>
+
+            <div class="header-icon">
+                <i class="fas fa-evenlope"></i><!-- "i class=fas fa-envelope" se refiere a un ícono de sobre -->
+                <i class="fas fa-user-circle"></i><!-- "i class=fas fa-user-circle" se refiere a un ícono de círculo de usuario -->
+            </div>
+        </header>
         <!--Sidebar-->
+        <aside class="sidebar" id="sidebar"><!--Contenedor del menú lateral, la etiqueta aside se utiliza para definir un área lateral -->
+            <ul><!--Lista de elementos del menú lateral-->
+                <li>Available Reservations</li>
+                <li>My Quotas</li>
+                <li>Request more time</li>
+                <li>Payments</li>
+                <li>Settings</li>
+                <li>Help</li>
+            </ul>
+
+        </aside>
 
     </div>
     <script src="js/script.js"></script>
