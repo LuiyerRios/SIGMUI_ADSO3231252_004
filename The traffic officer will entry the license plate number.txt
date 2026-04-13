@@ -1,0 +1,16 @@
+The traffic officer will entry the license plate number
+
+const plate = document.getElementById("plate").value.trim().toUpperCase();
+
+
+ // Aquí el agente introduce la matrícula
+    const plate = document.getElementById("plate").value.trim().toUpperCase();
+    const result = document.getElementById("result");
+
+    result.innerHTML = "";
+
+    // Valida que el agente ingrese la matricula
+    if(plate === ""){
+        result.innerHTML = "<p style='color:red;'>El agente de tráfico debe introducir el número de matrícula</p>";
+        return;
+    }
