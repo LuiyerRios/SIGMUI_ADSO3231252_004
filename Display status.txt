@@ -1,0 +1,17 @@
+Display status: Active / Expired / Not registered
+
+let estado = "";
+
+// Definir estado según la placa
+if(plate === "ABC1098"){
+    estado = "Activa";
+}
+else if(plate === "XYZ123"){
+    estado = "Caducada";
+}
+else{
+    estado = "No registrada";
+}
+
+// Mostrar estado
+result.innerHTML += `<p><strong>Estado de visualización:</strong> ${estado}</p>`;

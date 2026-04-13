@@ -1,0 +1,14 @@
+
+
+// FUNCION PARA FORMATEAR HORA
+function formatHour(date){
+    return date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+}
+
+// 🕒 GENERAR HORAS
+    let inicio = new Date();
+    let fin = new Date();
+    fin.setHours(inicio.getHours() + 2); // +2 horas
+
+    let horaInicio = formatHour(inicio);
+    let horaFin = formatHour(fin);
