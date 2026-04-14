@@ -71,18 +71,32 @@ body{
     align-items: center;
     padding: 20px;
 }
-/* CONTENEDOR DEL MAPA */
-.map-container{
-    position: relative;
-    width: 90%;
-    max-width: 700px;
+/* --- La Tarjeta del Mapa --- */
+.map-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 800px;
 }
 
-/* IMAGEN MOCKUP */
-.map-container img{
+.map-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.map-container {
+    position: relative;
+    text-align: center;
+}
+
+.map-container img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    display: block;
 }
 /* BOTÓN */
 .confirm-btn{
