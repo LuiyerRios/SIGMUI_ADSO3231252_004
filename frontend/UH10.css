@@ -93,3 +93,48 @@
     display: flex;
     flex-direction: column;
 }
+.indicadores {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-info {
+    background: #1a1d21;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.visor-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.imagen-ajustada {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.pie-pagina {
+    background-color: #f0f4f8;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.boton-confirmar {
+    background-color: #4a3aff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
