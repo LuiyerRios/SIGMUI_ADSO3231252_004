@@ -138,3 +138,19 @@
     font-weight: bold;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .contenedor-app {
+        flex-direction: column;
+    }
+    .barra-lateral {
+        width: 100%;
+        height: auto;
+    }
+    .indicadores {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .pie-pagina {
+        justify-content: center;
+    }
+}
