@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Parking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <h1><span>tech</span> parking</h1>
+</header>
+
+<div class="container">
+
+    <form class="form" action="RegistroServlet" method="POST" id="formulario">
+
+    <label>Nombre Completo</label>
+    <input type="text" name="nombre" required>
+
+    <label>Documento de identidad</label>
+    <input type="text" name="documento" required>
+
+    <label>Correo Electronico</label>
+    <input type="email" name="correo" id="correo">
+    <p id="error-email" style="color:red; font-size:12px;"></p>
+
+    <div class="row">
+        <div>
+            <label>Numero de telefono</label>
+            <input type="text" name="telefono">
+        </div>
+
+        <div>
+            <label>Placa del vehiculo</label>
+            <input type="text" name="placa">
+        </div>
+    </div>
+
+    <div class="row">
+        <div>
+            <label>Contraseña</label>
+            <input type="password" name="password" required>
+        </div>
+
+        <div>
+            <label>Confirmar contraseña</label>
+            <input type="password" name="confirmar" required>
+        </div>
+    </div>
+
+    <div class="checks">
+        <label>
+            <input type="checkbox" required>
+            Acepto los <span>terminos y condiciones</span>
+        </label>
+
+        <label>
+            <input type="checkbox" required>
+            Acepto la <span>politica de privacidad</span>
+        </label>
+    </div>
+
+</form>
+    <button class="btn" type="submit">Registrarse</button>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
