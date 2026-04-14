@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eaf4fb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.barra-azul {
+    background-color: #463dfb; 
+    padding: 10px 0; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.imagen-logo {
+    height: 130px; 
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
