@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>My Quotas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+
+        <!-- HEADER SUPERIOR -->
+        <div class="header">
+            <div class="header-left">
+
+                <!-- Icono calendario -->
+                <span class="icon"><img src="Imagenes/weekly-calendar_icon-icons.com_56749.png" alt=""></span>
+                <h2>My Quotas</h2>
+            </div>
+
+            <!-- Icono salir -->
+            <div class="header-right">
+                <img src="Imagenes/cerrar-sesion.png" alt="">
+            </div>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div class="content">
+
+            <!-- TÍTULO + BOTÓN -->
+            <div class="top-bar">
+                <h3>List of reservations</h3>
+                <button class="btn">View reservation</button>
+            </div>
+
+            <!-- TABLA -->
+            <table>
+                <thead>
+                    <tr>  
+                        <th>Nro</th>
+                        <th>Plate ▼</th>
+                        <th>Location</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody">
+                    
+                    <!-- Se llena con JavaScript -->
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
