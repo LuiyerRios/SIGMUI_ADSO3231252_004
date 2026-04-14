@@ -1,0 +1,119 @@
+/* RESET BÁSICO */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    width: 100%;
+    height: 100%;
+    background: #e6f2f8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(to right, #2E1DC0);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+img {
+    height: 50px;
+    width: 50px;
+}
+
+/* IZQUIERDA HEADER */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ICONO */
+.icon {
+    font-size: 20px;
+}
+
+/* DERECHA HEADER */
+.header-right {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* CONTENIDO */
+.content {
+    padding: 15px;
+    background-color: #e6f2f8;
+}
+
+/* BARRA SUPERIOR */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* BOTÓN */
+.btn {
+    background: #3f51b5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #2340FE;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #E6F2F8;
+}
+
+/* ENCABEZADOS */
+th {
+    text-align: left;
+    color: gray;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* FILAS */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ESTADOS */
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* COLORES DE ESTADO */
+.active {
+    background: green;
+}
+
+.completed {
+    background: gray;
+}
+
+.cancelled {
+    background: red;
+}
