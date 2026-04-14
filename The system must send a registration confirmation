@@ -1,6 +1,0 @@
-The system must send a registration confirmation.
-
-e.preventDefault();
-
-error.style.color = "green";
-error.textContent = "Registro exitoso. Confirmación enviada correctamente.";
