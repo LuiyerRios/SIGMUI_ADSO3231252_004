@@ -3,10 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Digital fine generation</title>
+    <link rel="Stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="app">
     
+    <div class="header">
+        <img  src="img/flecha.png" class="back-arrow">
+        <img src="img/Header.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="content">
+
+        <div class="section">
+            <div class="status">
+                ⚠️ ESTATUS: EXPIRED
+                <small>The vehícle exceeded the time limit</small>
+            </div>
+        </div>
+
+        <div class="section">
+            <div id="plate">
+                <h4>ABC276</h4>
+            </div>
+            <div class="info">
+                <span class="label">Vehicle:</span>
+                <span class="value">Toyota Corolla 2019</span>
+            </div>
+            <div class="info">
+                <span class="label">Location:</span>
+                <span class="value">A1</span>
+            </div>
+            <div class="info">
+                <span class="label">Expired:</span>
+                <span class="value" style="color:red;">2:30 p.m. (1h and 40 minutes ago)</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <label>Current location</label>
+            <input type="text" value="Calle 10 # 35 - 40">
+        </div>
+
+        <div class="section">
+            <label>Comments (optional)</label>
+            <textarea placeholder=" Ex: The ticket is not visible"></textarea>
+        </div>
+
+        <div class="fine">Amount of the fine
+                <p>$100.000 pesos</p>
+        </div>
+
+        <button class="button">Generate Ticket #Auto</button>
+        <div class="note">✅ If the registered user is not logged in
+        </div>
+
+</div>
 </body>
 </html>
