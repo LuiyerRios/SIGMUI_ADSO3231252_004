@@ -27,3 +27,34 @@ body{
     background: #2565AE;
     color: white;
 }
+.header-icons{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+#menu-toogle{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+/*sidebar*/
+.sidebar{
+    grid-row: 2 / 3;
+    background: #111;
+    color: white;
+    padding: 20px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*main content*/
+.main-content{
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2c2c2c;
+}
