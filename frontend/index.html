@@ -34,23 +34,32 @@
             <button class="logout-btn">
                 <i class="fas fa-sign-out-alt"></i>Logout<!-- "i class=fas fa-sign-out-alt" se refiere a un ícono de salida -->
             </button>
-
         </aside>
-
         <!--Main Content-->
-        <main class="main-content"><!--Contenedor del contenido principal-->
-            <div class="map-container"><!--Contenedor del mapa de estacionamiento-->
-                <img src="img/map-background.png" alt="Parking Map"><!--Imagen del mapa de estacionamiento, el atributo src se utiliza para especificar la ruta de la imagen y el atributo alt se utiliza para proporcionar una descripción alternativa de la imagen-->
-                <button class="confirm-btn"><!--Botón para confirmar el pago-->
+        <main class="main-content">
+            <div class="map-card"> <div class="map-container">
+                <header class="map-header">
+                    <h2>CENTRAL PARKING - LEVEL 1</h2>
+                    <span>May 14th, 15:45</span>
+                </header>
+                <img src="img/map-background.png" alt="Parking Map">
+                <button class="confirm-btn">
                     Confirm payment
                 </button>
+                </div>
             </div>
         </main>
-        <section class="info-panel"><!--Contenedor del panel de información-->
+        <section class="info-panel">
             <h3>Status</h3>
-            <p>Selected area details</p><!--Párrafo para mostrar los detalles del área seleccionada-->
+            <div class="status-details">
+                <p><strong>Selected Space:</strong> -</p>
+                <p><strong>Status:</strong> -</p>
+                <p><strong>Rate/Hour:</strong> -</p>
+            <br>
+            <p><strong>Standard Duration:</strong> 1 Hour</p>
+            </div>
+        <button class="confirm-res-btn">CONFIRM RESERVATION BUTTON</button>
         </section>
-    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
