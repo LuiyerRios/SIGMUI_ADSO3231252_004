@@ -28,3 +28,14 @@
     font-size: 1.1rem;
     margin-bottom: 30px;
 }
+.navegacion ul {
+    list-style: none;
+}
+
+.navegacion li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    cursor: pointer;
+}
