@@ -32,7 +32,7 @@ body{
     gap: 20px;
     font-size: 20px;
 }
-#menu-toogle{
+#menu-toggle{
     background: none;
     border: none;
     color: white;
@@ -108,15 +108,15 @@ body{
     .dashboard{
         grid-template-columns: 1fr;
     }
-
     .sidebar{
-        position: absolute;
+        position: fixed; /* 🔥 mejor que absolute */
         left: -100%;
         top: 60px;
-        height: 100%;
-        width: 200px;
+        height: calc(100% - 60px);
+        width: 220px;
+        z-index: 1000;
+        transition: 0.3s;
     }
-
     .sidebar.active{
         left: 0;
     }
