@@ -1,7 +1,0 @@
-The user must register at least one valid license plate.
-
-if(placa === "" || !formatoPlaca.test(placa)){
-    e.preventDefault();
-    error.textContent = "El usuario debe registrar al menos una matrícula válida. Ej: ABC123";
-    return;
-}
