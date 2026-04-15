@@ -55,4 +55,11 @@ body {
     font-weight: 700;
 }
 
+.instrucciones {
+    color: #8e8e8e;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 320px;
+    margin: 0 auto 40px auto;
+}
 
