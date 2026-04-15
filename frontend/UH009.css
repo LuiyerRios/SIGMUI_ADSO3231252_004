@@ -63,3 +63,13 @@ body {
     margin: 0 auto 40px auto;
 }
 
+.entrada-email {
+    width: 100%;
+    padding: 18px;
+    border: 1.5px solid #dcdcdc;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 50px;
+}
+
