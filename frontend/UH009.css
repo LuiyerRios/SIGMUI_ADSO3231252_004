@@ -91,4 +91,17 @@ body {
     font-size: 24px;
 }
 
+@media (max-width: 600px) {
+    .barra-azul {
+        padding: 5px 0;
+    }
+
+    .imagen-logo {
+        height: 80px; 
+    }
+
+    .tarjeta-blanca {
+        padding: 40px 20px;
+    }
+}
 
