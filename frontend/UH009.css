@@ -70,8 +70,24 @@ body {
     border-radius: 12px;
     font-size: 14px;
     outline: none;
-    margin-bottom: 50px;
+    margin-bottom: 25px; 
 }
+
+
+.boton-confirmar {
+    width: 100%;
+    padding: 16px;
+    background-color: #463dfb; 
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+}
+
 .contenedor-volver {
     display: flex;
     justify-content: center;
