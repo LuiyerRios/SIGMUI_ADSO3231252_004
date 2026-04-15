@@ -72,4 +72,23 @@ body {
     outline: none;
     margin-bottom: 50px;
 }
+.contenedor-volver {
+    display: flex;
+    justify-content: center;
+}
+
+.enlace-volver {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icono-flecha {
+    font-size: 24px;
+}
+
 
