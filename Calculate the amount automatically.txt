@@ -1,0 +1,4 @@
+let price = (type === "hour") ? 2000 : 20000;
+totalAmount = price * quantity;
+
+document.getElementById("total").innerText = totalAmount;
