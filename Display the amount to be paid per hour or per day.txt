@@ -1,0 +1,4 @@
+<select id="type">
+    <option value="hour">Per Hour ($2.000)</option>
+    <option value="day">Per Day ($20.000)</option>
+</select>
