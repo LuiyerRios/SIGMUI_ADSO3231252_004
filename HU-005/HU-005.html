@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request more time</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    
+    <div class="header">
+        <div class="left">
+            <img src="Imagenes/atras-en-el-tiempo.png" class="icon">
+            <h2>Request more time</h2>
+        </div>
+        <img src="Imagenes/flecha.png" class="back" onclick="goBack()">
+    </div>
+
+    <!-- TABLA -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>#N</th>
+                    <th>Location ▼</th>
+                    <th>Plate</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>001567</td>
+                    <td class="bold">A2</td>
+                    <td class="bold">AJS456</td>
+                    <td><span class="status active">Active</span></td>
+                    <td>
+                        <button class="plus" onclick="selectRow('A2','001567','AJS456','Active')">+</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>002215</td>
+                    <td class="bold">B1</td>
+                    <td class="bold">BJF356</td>
+                    <td><span class="status pending">To finish</span></td>
+                    <td>
+                        <button class="plus" onclick="selectRow('B1','002215','BJF356','To finish')">+</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="card">
+
+        <div class="card-top">
+
+            <div class="left-form">
+                <input id="location" disabled placeholder="Location:">
+                <input id="vehicle" disabled placeholder="Vehicle:">
+                <input id="plate" disabled placeholder="Plate:">
+
+                <div class="time-box">
+                    <span>Add time:</span>
+                    <div class="time-control">
+                        <button onclick="changeTime(-1)">−</button>
+                        <span id="hours">1 hour</span>
+                        <button onclick="changeTime(1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-form">
+                <span>Total</span>
+                <h2 id="price">$0</h2>
+            </div>
+
+        </div>
+
+        <div class="submit-container">
+        
+            <button class="submit" onclick="confirmExtension()" style="display:none;">
+                Extend Time
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
