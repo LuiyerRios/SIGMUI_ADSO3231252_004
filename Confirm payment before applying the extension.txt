@@ -1,0 +1,4 @@
+if (confirm("Confirm payment?")) {
+    alert("Payment successful ✅");
+    updateExpirationTime();
+}
