@@ -1,0 +1,3 @@
+function updateExpirationTime() {
+    expirationTime.setHours(expirationTime.getHours() + hours);
+}
