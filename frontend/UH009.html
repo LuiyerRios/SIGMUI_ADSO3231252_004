@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Parking - Recuperar Contraseña</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="UH009.css">
 </head>
 <body>
 
@@ -22,9 +22,13 @@
                 Enter the email address associated with your profile so we can send you the account recovery link.
             </p>
             
-            <input type="email" class="entrada-email" placeholder="ENTER YOUR EMAIL">
+           <input type="email" id="email" class="entrada-email" placeholder="ENTER YOUR EMAIL">
 
-            <button type="submit" class="boton-confirmar">confirm email</button>
+            <div id="mensajeError" class="mensaje-error"></div>
+            
+            <button type="button" class="boton-confirmar" onclick="validarEmail()">
+             confirm email
+            </button>
             
             <div class="contenedor-volver">
                 <a href="UH002.html" class="enlace-volver">
@@ -35,6 +39,6 @@
 
         </section>
     </main>
-
+    <script src="UH009.js"></script>
 </body>
 </html>
