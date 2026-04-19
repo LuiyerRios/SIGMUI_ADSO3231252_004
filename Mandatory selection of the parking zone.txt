@@ -1,4 +1,0 @@
-if (zone === "") {
-    alert("Select a zone");
-    return;
-}
