@@ -1,4 +1,0 @@
-function updatePrice() {
-    let total = hours * pricePerHour;
-    document.getElementById("price").innerText = "$" + total;
-}
