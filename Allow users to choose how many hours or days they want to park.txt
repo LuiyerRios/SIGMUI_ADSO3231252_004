@@ -1,1 +1,0 @@
-<input type="number" id="quantity" placeholder="Hours or Days">
