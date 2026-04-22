@@ -32,15 +32,13 @@ body {
     color: #666;
     font-size: 0.95rem;
 }
-/* 4. El Contenedor del Formulario (Aquí está la magia del diseño) */
 .form-container {
-    background-color: #1a5292; /* Azul oscuro */
+    background-color: #1a5292; 
     color: white;
     padding: 40px;
-    border-radius: 80px 0 80px 0; /* Esquinas asimétricas */
+    border-radius: 80px 0 80px 0;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-/* 5. Grid para inputs */
 .input-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -56,7 +54,6 @@ body {
     font-weight: 600;
     font-size: 0.9rem;
 }
-/* Estilo de inputs y textarea */
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -73,7 +70,6 @@ textarea {
     height: 120px;
     resize: none;
 }
-/* 6. Botón y contador */
 .char-counter {
     display: block;
     text-align: right;
@@ -95,7 +91,6 @@ textarea {
 .send-btn:hover {
     background-color: #0088cc;
 }
-/* 7. Footer */
 .help-footer {
     margin-top: 20px;
 }
@@ -106,4 +101,30 @@ textarea {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+/* --- ESTILOS RESPONSIVE --- */
+
+/* Cuando la pantalla sea menor a 768px (tablets y celulares) */
+@media (max-width: 768px) {
+    .input-group {
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+    }
+    .form-container {
+        padding: 25px; 
+        border-radius: 40px 0 40px 0; 
+    }
+    .header-section h1 {
+        font-size: 1.8rem;
+    }
+    .send-btn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+/* Cuando la pantalla sea muy pequeña (celulares pequeños) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; 
+    }
 }
