@@ -5,11 +5,11 @@
     font-family: 'Segoe UI', sans-serif;
 }
 body {
-    background-color: #e9f1f7; /* Azul muy clarito de fondo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f0f4f8; 
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    padding: 20px;
 }
 .help-page {
     width: 90%;
