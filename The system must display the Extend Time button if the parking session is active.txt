@@ -1,4 +1,0 @@
-if (plate === "") {
-    alert("Plate is required");
-    return;
-}
