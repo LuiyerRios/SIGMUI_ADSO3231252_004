@@ -1,0 +1,9 @@
+Duplicate email addresses are not allowed.
+
+let correos = JSON.parse(localStorage.getItem("correos")) || [];
+
+if(correos.includes(correo)){
+    e.preventDefault();
+    error.textContent = "No se permiten direcciones de correo electrónico duplicadas.";
+    return;
+}
