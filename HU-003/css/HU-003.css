@@ -137,29 +137,33 @@ body {
     gap: 10px;
     border-top: 1px solid rgba(255,255,255,0.1);
 }
-/* RESPONSIVE */
-@media (max-width: 900px){
-    .dashboard{
-        grid-template-columns: 60px 1fr;
-    }
-    .info-panel{
-        display: none;
-    }
-}
-@media (max-width: 600px){
-    .dashboard{
+/* --- AJUSTE RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 768px) {
+    /* 1. Cambiamos el grid para que sea solo 1 columna */
+    .dashboard-container {
         grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "main";
     }
-    .sidebar{
-        position: fixed; 
-        left: -100%;
-        top: 60px;
-        height: calc(100% - 60px);
-        width: 220px;
+    /* 2. Ocultamos el sidebar por defecto en móvil para que no estorbe */
+    .sidebar {
+        display: none; 
+        position: absolute; /* Para que flote encima cuando lo actives */
         z-index: 1000;
-        transition: 0.3s;
+        width: 240px;
+        height: 100vh;
     }
-    .sidebar.active{
-        left: 0;
+    /* 3. Clase para cuando el usuario presione el botón de menú */
+    .sidebar.active {
+        display: flex;
+    }
+    /* 4. Ajustamos el mapa para que no se desborde */
+    .map-card {
+        width: 95%; /* Un poco más de margen en los lados */
+        padding: 10px;
+    }
+    .map-header h2 {
+        font-size: 16px; /* Hacemos el texto un poco más pequeño en móvil */
     }
 }
