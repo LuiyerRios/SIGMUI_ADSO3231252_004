@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Available Areas - SIGMUI</title>
+    
+    <link rel="stylesheet" href="css/HU-003.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container"><!--Contenedor de dashboard-->
+        <!--Header-->
+        <header class="top-header">
+            <button id="menu-toggle" aria-label="Toggle Menu"><!--Botón para mostrar el menú lateral-->
+                <i class="fas fa-bars"></i><!-- "i class=fas fa-bars" se refiere a un ícono de barras -->
+            </button>
+
+            <div class="header-icons">
+                <i class="fas fa-envelope" title="Messages"></i><!-- "i class=fas fa-envelope" se refiere a un ícono de sobre -->
+                <i class="fas fa-user-circle" title="Profile"></i><!-- "i class=fas fa-user-circle" se refiere a un ícono de círculo de usuario -->
+            </div>
+        </header>
+        <!--Sidebar-->
+        <aside class="sidebar" id="sidebar"><!--Contenedor del menú lateral, la etiqueta aside se utiliza para definir un área lateral -->
+            <nav>
+                <ul class="nav-list"><!--Lista de elementos del menú lateral-->
+                    <li><a href="#"><i class="fas fa-th-large"></i> Available Reservations</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-check"></i> My Reservations</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Request more time</a></li>
+                    <li><a href="#"><i class="fas fa-credit-card"></i> Payments</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+                </ul>
+            </nav>
+
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Logout<!-- "i class=fas fa-sign-out-alt" se refiere a un ícono de salida -->
+
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <section class="map-card">
+                <header class="map-header">
+                    <h2>CENTRAL PARKING - LEVEL 1</h2>
+                    <span class="date-stamp">May 14th, 15:45</span>
+                </header>
+
+                <div class="map-container">
+                    <img src="img/map-background.png" alt="Parking Map of Central Parking Level 1" class="map-image">
+                </div>
+
+                <button type="button" class="confirm-btn">
+                    Confirm payment
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/HU-003.js"></script>
+</body>
+</html>
