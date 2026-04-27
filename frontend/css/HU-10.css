@@ -13,7 +13,7 @@
 
 .barra-lateral {
     width: 300px;
-    background-color: #4a3aff;
+    background-color: #2565ae;
     color: white;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@
 }
 
 .cabecera-azul {
-    background-color: #4a3aff;
+    background-color: #2565ae;
     height: 60px;
     display: flex;
     justify-content: flex-end;
@@ -130,7 +130,7 @@
 }
 
 .boton-confirmar {
-    background-color: #4a3aff;
+    background-color: #2340fe;
     color: white;
     padding: 12px 25px;
     border: none;
