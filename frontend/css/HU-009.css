@@ -14,7 +14,7 @@ body {
 
 
 .barra-azul {
-    background-color: #463dfb; 
+    background-color: #2565ae; 
     padding: 10px 0; 
     text-align: center;
     display: flex;
@@ -77,7 +77,7 @@ body {
 .boton-confirmar {
     width: 100%;
     padding: 16px;
-    background-color: #463dfb; 
+    background-color: #2340fe; 
     color: white;
     border: none;
     border-radius: 12px;
