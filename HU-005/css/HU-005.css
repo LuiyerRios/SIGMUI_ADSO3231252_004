@@ -13,7 +13,7 @@ body {
 
 .header {
     width: 100%;
-    background: #3b2cc9;
+    background: #2565AE;
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -143,7 +143,7 @@ td {
 }
 
 .submit {
-    background: #3b2cc9;
+    background: #2340FE;
     color: white;
     padding: 12px 60px;
     border: none;
