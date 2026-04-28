@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Inspection - SIGMUI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/HU-006.css">
 </head>
 <body>
 
     <header class="header">
         <button class="header__back" aria-label="Volver">
-            <img src="img/flecha.png" alt="Icono de volver">
+            <i class="fa-solid fa-arrow-left"></i>
         </button>
         <h1 class="header__title"><span>tech</span> parking</h1>
     </header>
 
     <main class="container">
+        
         <section class="inspection-agent">
-            <img src="img/transito.png" alt="Agente" class="inspection-agent__icon">
+            <img src="img/transito.png" alt="Agente de Tránsito" class="inspection-agent__icon">
             <h2 class="inspection-agent__title">Vehicle Inspection</h2>
         </section>
 
         <form class="inspection-form" data-n8n-form="vehicle-check">
             <label for="plate-input" class="inspection-form__label">Plate to be checked</label>
             <div class="plate-input">
-                <img src="img/colombia.png" alt="Bandera Colombia" class="plate-input__flag">
+                <img src="img/colombia.png" alt="Bandera" class="plate-input__flag">
                 <input 
                     type="text" 
                     id="plate-input" 
@@ -40,7 +42,7 @@
             
             <article class="card card--success" data-status="valid">
                 <div class="card__icon icon-status--success">
-                    <img src="img/aceptar.png" alt="Valid">
+                    <i class="fa-solid fa-check"></i>
                 </div>
                 <div class="card__info">
                     <h3>PAYMENT PROCESSED</h3>
@@ -53,7 +55,7 @@
 
             <article class="card card--error" data-status="expired">
                 <div class="card__icon icon-status--error">
-                    <img src="img/boton-x.png" alt="Error">
+                    <i class="fa-solid fa-xmark"></i>
                 </div>
                 <div class="card__info">
                     <h3>PAYMENT INACTIVE</h3>
@@ -67,7 +69,7 @@
             <h3 class="results-area__subtitle">NOT REGISTERED</h3>
             <article class="card card--neutral" data-status="not-registered">
                 <div class="card__icon icon-status--neutral">
-                    <img src="img/eliminar.png" alt="Not Found">
+                    <i class="fa-solid fa-circle-xmark"></i>
                 </div>
                 <div class="card__info">
                     <p>The license plate has no active payments</p>

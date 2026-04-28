@@ -1,93 +1,90 @@
-document.getElementById("plate").addEventListener("input", function(){
+// 1. Evento para garantizar integridad de datos: Placas siempre en mayúsculas
+document.getElementById("plate-input").addEventListener("input", function() {
     this.value = this.value.toUpperCase();
 });
 
-function formatHour(date){
-    return date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+/**
+ * Función auxiliar para formatear la hora (Requerimiento visual)
+ */
+function formatHour(date) {
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 
-function checkPlate(){
+/**
+ * Función principal de validación (checkPlate)
+ * Esta función procesa la entrada del agente y actualiza el DOM.
+ * Integración n8n: Preparada para ser conectada a un webhook mediante fetch().
+ */
+function checkPlate() {
+    const plateInput = document.getElementById("plate-input");
+    const plate = plateInput.value.trim().toUpperCase();
+    const resultContainer = document.getElementById("result");
 
-    const plate = document.getElementById("plate").value.trim().toUpperCase();
-    const result = document.getElementById("result");
+    // Limpieza de interfaz antes de mostrar nuevos datos
+    resultContainer.innerHTML = ""; 
 
-    result.innerHTML = "";
-
-    if(plate === ""){
-        result.innerHTML = "<p style='color:red;'>El agente debe introducir una matrícula</p>";
+    // Validación de campo vacío
+    if (!plate) {
+        resultContainer.innerHTML = "<p style='color:red; text-align:center;'>Error: Debe ingresar una matrícula</p>";
         return;
     }
 
+    // Expresión regular para validar formato estándar (3 letras, 3 números)
     const formato = /^[A-Z]{3}[0-9]{3}$/;
-
-    if(!formato.test(plate)){
-        result.innerHTML = "<p style='color:red;'>Formato inválido. Ej: ABC123</p>";
+    if (!formato.test(plate)) {
+        resultContainer.innerHTML = "<p style='color:red; text-align:center;'>Formato incorrecto. Ejemplo: ABC123</p>";
         return;
     }
 
+    // --- Simulación de consulta al sistema (Aquí iría el Fetch a n8n) ---
+    procesarRespuesta(plate);
+}
+
+/**
+ * Lógica para renderizar los estados según el resultado de la consulta
+ */
+function procesarRespuesta(plate) {
     let inicio = new Date();
     let fin = new Date();
     fin.setHours(inicio.getHours() + 2);
 
-    let horaInicio = formatHour(inicio);
-    let horaFin = formatHour(fin);
-
-    let estado = "";
-
-    if(plate === "ABC123"){
-        estado = "Activa";
-
-        result.innerHTML = `
-        <div class="card success">
-            <div class="icon-status">
-                <img src="img/aceptar.png">
-            </div>
-            <div class="info">
-                <h3>PAYMENT PROCESSED</h3>
-                <p><strong>Estado de visualización:</strong> ${estado}</p>
-                <p><strong>Inicio:</strong> ${horaInicio}</p>
-                <p><strong>Caducidad:</strong> ${horaFin}</p>
-                <p>Zone A1</p>
-            </div>
-            <span class="badge valid">Valid</span>
-        </div>
-        `;
+    // Lógica condicional básica para el prototipo
+    if (plate === "ABC123") {
+        renderizarUI("success", "PAYMENT PROCESSED", "Zone A1", `${formatHour(inicio)} - ${formatHour(fin)} (2h)`, "Valid", "fa-check");
+    } else if (plate === "XYZ123") {
+        renderizarUI("error", "PAYMENT INACTIVE", "Zone B2", "Expirado hace 1 hora", "Expired", "fa-xmark");
+    } else {
+        renderizarNoRegistrado();
     }
+}
 
-    else if(plate === "XYZ123"){
-        estado = "Caducada";
+// --- FUNCIONES DE RENDERING (Modularidad para evitar redundancia de código) ---
 
-        result.innerHTML = `
-        <div class="card error">
-            <div class="icon-status">
-                <img src="img/boton-x.png">
+function renderizarUI(tipo, titulo, zona, detalle, badge, iconClass) {
+    const html = `
+        <article class="card card--${tipo}">
+            <div class="card__icon icon-status--${tipo}">
+                <i class="fa-solid ${iconClass}"></i>
             </div>
-            <div class="info">
-                <h3>PAYMENT INACTIVE</h3>
-                <p><strong>Estado de visualización:</strong> ${estado}</p>
-                <p><strong>Inicio:</strong> ${horaInicio}</p>
-                <p><strong>Caducidad:</strong> ${horaFin}</p>
-                <p>Zone B2</p>
+            <div class="card__info">
+                <h3>${titulo}</h3>
+                <p>${zona}</p>
+                <p>${detalle}</p>
             </div>
-            <span class="badge expired">Expired</span>
-        </div>
-        `;
-    }
+            <span class="badge badge--${tipo}">${badge}</span>
+        </article>`;
+    document.getElementById("result").innerHTML = html;
+}
 
-    else{
-        estado = "No registrada";
-
-        result.innerHTML = `
-        <h3 style="margin:10px 0;">NOT REGISTERED</h3>
-        <div class="card neutral">
-            <div class="icon-status">
-                <img src="img/eliminar.png">
+function renderizarNoRegistrado() {
+    document.getElementById("result").innerHTML = `
+        <h3 class="results-area__subtitle" style="margin-top:20px;">NOT REGISTERED</h3>
+        <article class="card card--neutral">
+            <div class="card__icon icon-status--neutral">
+                <i class="fa-solid fa-circle-xmark"></i>
             </div>
-            <div class="info">
-                <p><strong>Estado de visualización:</strong> ${estado}</p>
-                <p>No hay información de horas</p>
+            <div class="card__info">
+                <p>La placa no presenta registros activos.</p>
             </div>
-        </div>
-        `;
-    }
+        </article>`;
 }
