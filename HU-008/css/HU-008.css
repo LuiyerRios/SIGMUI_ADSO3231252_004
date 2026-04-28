@@ -11,31 +11,41 @@ body {
     max-width: 800px;
     margin: auto;
     border: 1px solid #ccc;
+    width: 100%;
 }
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    gap: 10px;
 }
-.filtro {
+.filter {
     border: 1px solid #ccc;
     padding: 8px 12px;
     border-radius: 4px;
+    width: 93%;
     display: flex;
     align-items: center;
     gap: 8px;
     background: #f9f9f9;
-    cursor: pointer;
 }
-.acciones {
+.filter input{
+    border: none;
+    background: transparent;
+    font-size: 14px;
+}
+.actions {
     display: flex;
     gap: 10px;
 }
+.btn:focus{
+    outline: 2px solid #007bff;
+}
 .btn {
     padding: 8px 12px;
-    border: 1px solid #999;
-    background: #eee;
+    border: 1px solid #666;
+    background: #e0e0e0;
     cursor: pointer;
     border-radius: 4px;
     transition: 0.2s;
@@ -43,22 +53,22 @@ body {
 .btn:hover {
     background: #ddd;
 }
-.contenido {
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.grafica {
+.graphic {
     border: 1px solid #ccc;
     padding: 20px;
     background: #fafafa;
     margin-bottom: 20px;
 }
 
-.grafica img {
+.graphic img {
     max-width: 100%;
 }
-.mensaje-error {
+.error-message {
     width: 100%;
     border: 1px solid #ccc;
     padding: 10px;
@@ -68,4 +78,47 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .filter {
+        width: 93%;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .graphic {
+        padding: 10px;
+    }
+}
+@media (min-width: 768px) {
+    .actions {
+        flex-direction: row;
+    }
+
+    .btn {
+        min-width: 140px;
+    }
 }
