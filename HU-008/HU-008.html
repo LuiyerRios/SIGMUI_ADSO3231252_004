@@ -4,32 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="HU-008.css">
+    <link rel="Stylesheet" href="css/HU-008.css">
+    <link rel="preload" as="image" href="img/Grafica.png">
 </head>
 <body>
+    <main>
     <div class="container">
 
     <div class="header">
-        <div class="filtro">
-            📅 Filter by date
-            <input type="date">
+        <div class="filter">
+            <label for="fecha">📅 Filter by date</label>
+            <input type="date" id="fecha" name="fecha">
         </div>
 
-        <div class="acciones">
-            <button class="btn">Exportar PDF</button>
-            <button class="btn">Exportar Excel</button>
+        <div class="actions">
+            <button class="btn">Export PDF</button>
+            <button class="btn">Export Excel</button>
         </div>
     </div>
 
-    <div class="contenido">
-        <div class="grafica">
-            <img src="img/Grafica.png" alt="Gráfica">
+    <div class="content">
+        <div class="graphic">
+            <img src="img/Grafica.png" alt="Grahp of parking data">
         </div>
 
-        <div class="mensaje-error">
-            ⚠️ Sin datos disponibles
+        <div class="error-message">
+            ⚠️ No data available
         </div>
     </div>
 </div>
+</main>
 </body>
 </html>
