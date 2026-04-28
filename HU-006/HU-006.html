@@ -1,93 +1,82 @@
-<!DOCTYPE html> 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Vehicle Inspection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Inspection - SIGMUI</title>
     <link rel="stylesheet" href="css/HU-006.css">
 </head>
 <body>
 
+    <header class="header">
+        <button class="header__back" aria-label="Volver">
+            <img src="img/flecha.png" alt="Icono de volver">
+        </button>
+        <h1 class="header__title"><span>tech</span> parking</h1>
+    </header>
 
-<header class="header">
-    <div class="back">
-        <img src="img/flecha.png" alt="back">
-    </div>
-    <h1><span>tech</span> parking</h1>
-</header>
+    <main class="container">
+        <section class="inspection-agent">
+            <img src="img/transito.png" alt="Agente" class="inspection-agent__icon">
+            <h2 class="inspection-agent__title">Vehicle Inspection</h2>
+        </section>
 
-
-<div class="container">
-
-    <div class="icon">
-    <img src="img/transito.png" alt="inspector">
-    </div>
-    <h2>Vehicle Inspection</h2>
-
-    <label>El agente de tráfico introducirá el número de matrícula</label>
-
-    <div class="plate-input">
-        <img src="img/colombia.png" class="flag">
-        <input 
-            type="text" 
-            id="plate" 
-            placeholder="Ej: ABC123"
-            required
-            >
-    </div>
-
-    <button class="btn" onclick="checkPlate()">Check</button>
-
-    <div id="result">
-        <br>
-
-    
-        <div class="card success">
-            <div class="icon-status">
-            <img src="img/aceptar.png" alt="valid">
+        <form class="inspection-form" data-n8n-form="vehicle-check">
+            <label for="plate-input" class="inspection-form__label">Plate to be checked</label>
+            <div class="plate-input">
+                <img src="img/colombia.png" alt="Bandera Colombia" class="plate-input__flag">
+                <input 
+                    type="text" 
+                    id="plate-input" 
+                    class="plate-input__field"
+                    placeholder="ABC1098"
+                    required
+                >
             </div>
-            <div class="info">
-                <h3>PAYMENT PROCESSED</h3>
-                <p>Zone A1</p>
-                <p>14 : 30 - 16 : 30 (2h)</p>
-                <p>Time remaining: 45 min</p>
-            </div>
-            <span class="badge valid">Valid</span>
-        </div>
+            <button type="button" class="btn-check" onclick="checkPlate()">CHECK</button>
+        </form>
 
-        <br>
+        <section id="result" class="results-area">
+            
+            <article class="card card--success" data-status="valid">
+                <div class="card__icon icon-status--success">
+                    <img src="img/aceptar.png" alt="Valid">
+                </div>
+                <div class="card__info">
+                    <h3>PAYMENT PROCESSED</h3>
+                    <p>Zone A1</p>
+                    <p>14:30 - 16:30 (2h)</p>
+                    <p>Time remaining: 45 min</p>
+                </div>
+                <span class="badge badge--valid">Valid</span>
+            </article>
 
-        <div class="card error">
-            <div class="icon-status">
-                <img src="img/boton-x.png" alt="error">
-            </div>
-            <div class="info">
-                <h3>PAYMENT INACTIVE</h3>
-                <p>Zone B2</p>
-                <p>10 : 00 - 12 : 00 (1h)</p>
-                <p>Expired 1 hour and 40 minutes ago</p>
-            </div>
-            <span class="badge expired">Expired</span>
-        </div>
-        <br>
-        <br>
-            <h3>NOT REGISTERED</h3>
-  
-        <div class="card neutral">
-            <div class="icon-status">
-                <img src="img/eliminar.png" alt="not found">
-            </div>
-            <div class="info">
-                
-                <p>The license plate has no active payments</p>
-            </div>
-        </div>
+            <article class="card card--error" data-status="expired">
+                <div class="card__icon icon-status--error">
+                    <img src="img/boton-x.png" alt="Error">
+                </div>
+                <div class="card__info">
+                    <h3>PAYMENT INACTIVE</h3>
+                    <p>Zone B2</p>
+                    <p>10:00 - 12:00 (1h)</p>
+                    <p>Expired 1 hour and 40 minutes ago</p>
+                </div>
+                <span class="badge badge--expired">Expired</span>
+            </article>
 
-    </div>
+            <h3 class="results-area__subtitle">NOT REGISTERED</h3>
+            <article class="card card--neutral" data-status="not-registered">
+                <div class="card__icon icon-status--neutral">
+                    <img src="img/eliminar.png" alt="Not Found">
+                </div>
+                <div class="card__info">
+                    <p>The license plate has no active payments</p>
+                </div>
+            </article>
 
-</div>
+        </section>
+    </main>
 
-
-<script src="js/HU-006.js"></script>
-
+    <script src="js/HU-006.js"></script>
 </body>
 </html>
