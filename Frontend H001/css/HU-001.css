@@ -6,7 +6,7 @@
 }
 
 .header{
-    background:#3D27FF;
+    background:#2565AE;
     padding:20px;
     text-align:center;
 }
@@ -84,14 +84,14 @@ body{
 }
 
 .checks span{
-    color:#2340FE;
+    color:#2565AE;
     font-weight:bold;
 }
 
 .btn{
     margin-top:20px;
     padding:12px 40px;
-    background:#2340FE;
+    background:#2565AE;
     color:#fff;
     border:none;
     border-radius:8px;
