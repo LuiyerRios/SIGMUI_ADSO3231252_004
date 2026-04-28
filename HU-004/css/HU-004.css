@@ -11,7 +11,7 @@ body {
 
 /* HEADER */
 .header {
-    background: #3d2cc9;
+    background: #2565AE;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -77,7 +77,7 @@ body {
 
 /* BOTÓN */
 .btn {
-    background: #2f49d1;
+    background: #2340FE;
     color: white;
     border: none;
     padding: 8px 15px;
