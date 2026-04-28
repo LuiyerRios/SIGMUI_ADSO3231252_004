@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital fine generation</title>
-    <link rel="Stylesheet" href="styles.css">
+    <link rel="Stylesheet" href="HU-007.css">
 </head>
 <body>
     <div class="app">
     
     <div class="header">
-        <img  src="img/flecha.png" class="back-arrow">
+        <a href="HU-006.html" class="back">
+        <img  src="img/flecha.png" class="back-arrow" alt="back-arrow">
+        </a>
         <img src="img/Header.png" alt="Logo" class="logo">
     </div>
 
-    <div class="content">
+    <main class="content">
 
         <div class="section">
             <div class="status">
@@ -28,8 +30,8 @@
                 <h4>ABC276</h4>
             </div>
             <div class="info">
-                <span class="label">Vehicle:</span>
-                <span class="value">Toyota Corolla 2019</span>
+                <span class="label">Date:</span>
+                <span class="value">February - 27 - 2026</span>
             </div>
             <div class="info">
                 <span class="label">Location:</span>
@@ -42,23 +44,28 @@
         </div>
 
         <div class="section">
-            <label>Current location</label>
-            <input type="text" value="Calle 10 # 35 - 40">
+            <label for="location">Current location</label>
+            <input type="text" id="location" value="Calle 10 # 35 - 40">
         </div>
 
         <div class="section">
-            <label>Comments (optional)</label>
-            <textarea placeholder=" Ex: The ticket is not visible"></textarea>
+            <label for="comments">Comments (optional)</label>
+            <textarea id="comments" name="comments" placeholder=" Ex: The ticket is not visible"></textarea>
         </div>
 
         <div class="fine">Amount of the fine
                 <p>$100.000 pesos</p>
         </div>
 
+        <div class="ticked-id">
+        Ticket #: <span id="ticketNumber">----</span>
+        </div>
+
         <button class="button">Generate Ticket #Auto</button>
         <div class="note">✅ If the registered user is not logged in
         </div>
 
-</div>
+</main>
 </body>
+<script src="HU-007.js"></script>
 </html>
